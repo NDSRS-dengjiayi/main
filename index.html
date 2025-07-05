@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的说人生 - 个人主页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <!-- 引入Google字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">你的说人生</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active" data-translate="home">首页</a></li>
+                <li><a href="#about" data-translate="about">关于我</a></li>
+                <li><a href="#contact" data-translate="contact">联系方式</a></li>
+            </ul>
+            <div class="settings-button">
+                <button id="settingsToggle"><i class="fas fa-cog"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 首页/欢迎区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="你的说人生" data-translate="title">你的说人生</h1>
+                <p class="tagline" data-translate="tagline">探索科技与创意的无限可能</p>
+            </div>
+            <div class="hero-visual">
+                <div class="tech-circle"></div>
+                <div class="avatar-container">
+                    <img src="assets/images/tx.png" alt="你的说人生" class="avatar">
+                </div>
+            </div>
+        </div>
+        <div class="particles-container" id="particles-js"></div>
+    </section>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-translate="about_title">关于我</h2>
+            <div class="section-content">
+                <div class="about-text">
+                    <p data-translate="about_intro1">欢迎来到我的个人空间！我是<span class="highlight">你的说人生</span>，一个热爱科技与创新的探索者。</p>
+                    <p data-translate="about_intro2">在这个数字化的时代，我致力于探索技术与艺术的完美结合，创造出独特的数字体验。</p>
+                    <p data-translate="about_intro3">我相信技术不仅仅是工具，更是表达创意和解决问题的媒介。通过不断学习和实践，我希望能够为这个世界带来一些微小但有意义的改变。</p>
+                    <div class="tech-tags">
+                        <span class="tag" data-translate="tag_innovation">创新</span>
+                        <span class="tag" data-translate="tag_tech">科技</span>
+                        <span class="tag" data-translate="tag_design">设计</span>
+                        <span class="tag" data-translate="tag_explore">探索</span>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-container">
+                        <pre><code class="language-cpp"></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {5, 2, 8, 3, 1};
+    
+    // Sort and print
+    std::sort(v.begin(), v.end());
+    for (int n : v) std::cout &lt;&lt; n &lt;&lt; " ";
+    
+    // Find first even
+    auto it = std::find_if(v.begin(), v.end(),
+        [](int n){ return n%2 == 0; });
+    
+    if (it != v.end())
+        std::cout &lt;&lt; "\nEven: " &lt;&lt; *it;
+    
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式部分 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">联系方式</h2>
+            <div class="section-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="details">
+                            <h3 data-translate="contact_email">邮箱</h3>
+                            <p><a href="mailto:dengjiayi20120909@163.com">dengjiayi20120909@163.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <h3 data-translate="contact_phone">电话</h3>
+                            <p><a href="tel:19527719092">19527719092</a></p>
+                        </div>
+                    </div>
+                    <div class="ccw-btn-container">
+                        <a href="https://www.ccw.site/student/6607fa2ea7113d4ff034d6ed" class="btn btn-blue" target="_blank">CCW</a>
+                        <a href="https://github.com/NDSRS-dengjiayi" class="btn btn-blue" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="contact-visual">
+                    <div class="tech-cube">
+                        <div class="cube-face front"></div>
+                        <div class="cube-face back"></div>
+                        <div class="cube-face right"></div>
+                        <div class="cube-face left"></div>
+                        <div class="cube-face top"></div>
+                        <div class="cube-face bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="copyright">2025 你的说人生. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 设置面板模态框 -->
+    <div id="settingsModal" class="settings-modal">
+        <div class="settings-panel">
+            <h2 class="settings-title" data-translate="settings">设置</h2>
+            <button class="close-modal">&times;</button>
+            
+            <!-- 主题切换功能已移除 -->
+            
+            <div class="settings-section">
+                <h3 data-translate="language">语言</h3>
+                <div class="language-options">
+                    <button class="lang-btn active" data-lang="zh">中文</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3 data-translate="background_music">背景音乐</h3>
+                <div class="music-control">
+                    <label class="switch">
+                        <input type="checkbox" id="musicToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="music-status" data-translate="on">开启</span>
+                </div>
+                <div class="volume-control">
+                    <label for="volumeSlider" data-translate="volume">音量</label>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+                    <span class="volume-value">50%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景音乐元素 -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music/background/mcx.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript文件 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+    <!-- 语言初始化由lang.js处理 -->
+</body>
+</html>
